@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600;700;900&display=swap");
+
+@import "reset.css";
+/* @import "varibles.css"; */
+
+/* components */
+@import "components/nav.css";
+
+/* screens */
+@import "screens/schedule.css";
+@import "screens/username.css";
+@import "screens/todo.css";
+
+html {
+  font: 62.5%;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fraunces", serif;
+  background-color: rgb(7, 48, 7);
+  background-image: url("../images/2.jpg");
+}
+
+main {
+  width: 99%;
+  height: 30rem;
+  background-color: rgba(96, 163, 188, 0.7);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+
+  display: grid;
+  grid-template-rows: 6fr 4fr;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}

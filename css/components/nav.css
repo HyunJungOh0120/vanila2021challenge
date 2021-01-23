@@ -1,0 +1,36 @@
+.nav {
+  display: flex;
+  align-items: baseline;
+  width: 90%;
+  margin-top: 9rem;
+  position: relative;
+}
+
+.nav__timeline {
+  font-size: 4rem;
+}
+
+.nav__timeline--time {
+  position: absolute;
+  top: -4rem;
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: rgb(237, 212, 238);
+
+  /* box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35); */
+}
+
+.nav__timeline--date {
+  position: absolute;
+  font-size: 1.7rem;
+  left: 53.7%;
+  bottom: 0.2rem;
+  color: rgb(177, 226, 202);
+}
+
+.nav__weather {
+  position: absolute;
+  right: 0%;
+  bottom: 4%;
+  color: rgb(219, 236, 248);
+}

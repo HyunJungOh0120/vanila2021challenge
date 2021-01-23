@@ -1,0 +1,32 @@
+.schedule {
+  height: 12rem;
+  display: grid;
+  width: auto;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.2rem;
+  justify-content: flex-end;
+}
+
+.days {
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.days__day {
+  background-color: rgb(11, 11, 74);
+  color: white;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.days__list {
+  background-color: whitesmoke;
+  grid-row: 2/7;
+  overflow: scroll;
+  scroll-behavior: initial;
+}

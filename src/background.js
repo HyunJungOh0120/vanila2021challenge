@@ -20,7 +20,7 @@ const backImg = function (imgNum) {
   const img = new Image();
   img.src = `images/${imgNum}.jpg`;
   img.classList.add("afterImg");
-  afterloginPage.style.backgroundImage = `url("../images/${imgNum}.jpg")`;
+  //   afterloginPage.style.backgroundImage = `url("../images/${imgNum}.jpg")`;
   afterloginPage.appendChild(img);
 };
 

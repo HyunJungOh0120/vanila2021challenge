@@ -10,7 +10,7 @@ const getRandomNum = function () {
 
 const paintImg = function (imgNum) {
   const img = new Image();
-  img.src = `images/${imgNum}.jpg`;
+  img.src = `/images/${imgNum}.jpg`;
   img.classList.add("beforeImg");
 
   imgContainer.appendChild(img);
@@ -18,7 +18,7 @@ const paintImg = function (imgNum) {
 
 const backImg = function (imgNum) {
   const img = new Image();
-  img.src = `images/${imgNum}.jpg`;
+  img.src = `/images/${imgNum}.jpg`;
   img.classList.add("afterImg");
   //   afterloginPage.style.backgroundImage = `url("../images/${imgNum}.jpg")`;
   afterloginPage.appendChild(img);

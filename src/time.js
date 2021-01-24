@@ -21,7 +21,7 @@ const dayConvert = function (dayNum) {
   if (dayNum === 6) {
     return "Sat";
   }
-  if (dayNum === 7) {
+  if (dayNum === 0) {
     return "Sun";
   }
 };

@@ -7,82 +7,67 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <nav class="nav">
-      <div class="nav__timeline">
-        <span class="nav__timeline--time">18:30:02</span>
-        <span class="nav__timeline--date">sat, 2021</span>
+    <div class="beforelogin">
+      <form class="username__form">
+        <input
+          class="username__input"
+          type="text"
+          placeholder="Write your name here."
+        />
+        <!-- <button class="username__button">
+          <i class="fas fa-arrow-right"></i>
+        </button> -->
+      </form>
+      <div class="imgBox"></div>
+    </div>
+
+    <div class="afterlogin hidden">
+      <div class="afterlogin__innerbox">
+        <nav class="nav">
+          <div class="nav__weather">
+            <span class="nav__weather--city">Singapore</span>
+            <span class="nav__weather--temp">27°C</span>
+            <span class="nav__weather--emoji"><i class="far fa-sun"></i></span>
+          </div>
+        </nav>
+
+        <main>
+          <div class="nav__timeline">
+            <span class="nav__timeline--date">sat, 2021</span>
+            <span class="nav__timeline--time">18:30:02</span>
+          </div>
+          <article class="username">
+            <!-- <form class="username__form">
+            <input
+              class="username__input"
+              type="text"
+              placeholder="What's your name?"
+            />
+            <button class="username__button">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form> -->
+            <h2 class="username__name hidden">Hi, HyunJung</h2>
+          </article>
+
+          <article class="todobox">
+            <form class="todoform">
+              <input
+                class="todoinput"
+                type="text"
+                placeholder="What is your main focus for today?"
+              />
+            </form>
+            <ul class="todolist">
+              <!-- <li>
+                <button>❌</button>
+                <span>homework</span> -->
+              <!-- </li> -->
+            </ul>
+          </article>
+        </main>
       </div>
-
-      <div class="nav__weather">
-        <span class="nav__weather--city">Singapore</span>
-        <span class="nav__weather--temp">27°C</span>
-        <span class="nav__weather--emoji"><i class="far fa-sun"></i></span>
-      </div>
-    </nav>
-
-    <main>
-      <article class="username">
-        <form class="username__form">
-          <input
-            class="username__input"
-            type="text"
-            placeholder="What's your name?"
-          />
-          <button class="username__button">
-            <i class="fas fa-arrow-right"></i>
-          </button>
-        </form>
-        <h2 class="username__name hidden">Hi, HyunJung</h2>
-      </article>
-
-      <article class="todolist">
-        <form class="todoform">
-          <input type="text" placeholder="Things to do" />
-
-          <select name="" id="">
-            <option value="">Choose a Day</option>
-            <option value="mon">Mon</option>
-            <option value="tue">Tue</option>
-            <option value="wed">Wed</option>
-            <option value="thu">Thu</option>
-            <option value="fri">Fri</option>
-            <option value="sat">Sat</option>
-            <option value="sun">Sun</option>
-          </select>
-        </form>
-      </article>
-
-      <article class="schedule">
-        <article class="days">
-          <h2 class="days__day">MON</h2>
-          <ul class="days__list"></ul>
-        </article>
-        <article class="days">
-          <h2 class="days__day">TUE</h2>
-          <ul class="days__list"></ul>
-        </article>
-        <article class="days">
-          <h2 class="days__day">WED</h2>
-          <ul class="days__list"></ul>
-        </article>
-        <article class="days">
-          <h2 class="days__day">THU</h2>
-          <ul class="days__list"></ul>
-        </article>
-        <article class="days">
-          <h2 class="days__day">FRI</h2>
-          <ul class="days__list"></ul>
-        </article>
-        <article class="days">
-          <h2 class="days__day">SAT</h2>
-          <ul class="days__list"></ul>
-        </article>
-        <article class="days">
-          <h2 class="days__day">SUN</h2>
-          <ul class="days__list"></ul>
-        </article>
-      </article>
-    </main>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/f5ac9989c4.js"
@@ -91,5 +76,8 @@
 
     <script src="src/time.js"></script>
     <script src="src/username.js"></script>
+    <script src="src/geolocation.js"></script>
+    <script src="src/background.js"></script>
+    <script src="src/todo.js"></script>
   </body>
 </html>

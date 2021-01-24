@@ -1,5 +1,29 @@
-.todolist {
+.todobox {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.todoform {
+}
+
+.todoinput {
+  color: rgb(236, 236, 236);
+  font-size: 2rem;
+  font-weight: bold;
+  width: 35rem;
+  border-bottom: snow solid 0.1rem;
+
+  margin-bottom: 1rem;
+}
+
+.todoinput::placeholder {
+  color: rgb(236, 236, 236);
+}
+
+.todolist {
+  color: snow;
+
+  height: 5.5rem;
+  overflow: auto;
 }

@@ -10,16 +10,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: none;
 }
 
 .username__input {
-  border: none;
-  font-size: 3rem;
-  text-align: center;
-  cursor: pointer;
+  font-size: 2rem;
+  color: rgb(236, 236, 236);
 }
+.username__input::placeholder {
+  color: white;
+}
+
 .username__input:focus-within {
   opacity: 70%;
+  outline: none;
 }
 
 .username__button {
@@ -30,6 +35,6 @@
 
 .username__name {
   font-size: 3rem;
-  color: rgba(19, 15, 64, 1);
+  color: white;
   font-weight: bold;
 }

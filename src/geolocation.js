@@ -5,10 +5,12 @@ const city = weatherContainer.querySelector(".nav__weather--city");
 
 const temp = weatherContainer.querySelector(".nav__weather--temp");
 const emoji = weatherContainer.querySelector(".nav__weather--emoji");
+const countryBox = weatherContainer.querySelector(".nav__weather--country");
+const flagBox = weatherContainer.querySelector(".nav__weather--flag");
 
 const COORDS = "coords";
 //////////////////////////////////////////////////////////////////
-let temperature, weather;
+let temperature, weather, icon;
 
 const getWeather = function (lat, lng) {
   fetch(
@@ -16,10 +18,18 @@ const getWeather = function (lat, lng) {
   )
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       temperature = data.main.temp;
 
       weather = data.weather[0].main;
-      console.log(data);
+      icon = data.weather[0].icon;
+
+      const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+      const iconImg = document.createElement("img");
+      iconImg.src = iconURL;
+      iconImg.classList.add("iconImg");
+      emoji.appendChild(iconImg);
+
       const country = data.sys.country;
 
       return fetch(`https://restcountries.eu/rest/v2/alpha/${country}`);
@@ -27,9 +37,16 @@ const getWeather = function (lat, lng) {
     .then((res) => res.json())
     .then((data) => {
       const ctry = data.name;
+      console.log(data);
+      city.textContent = `${ctry}`;
+      temp.textContent = `${weather}, ${temperature}°C`;
 
-      city.textContent = `${ctry},`;
-      temp.textContent = `${weather} ${temperature}°C`;
+      const flagURL = data.flag;
+
+      const img = document.createElement("img");
+      img.src = flagURL;
+      img.classList.add("flagImg");
+      flagBox.appendChild(img);
     });
 };
 

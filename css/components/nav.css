@@ -2,11 +2,11 @@
   float: left;
   margin-right: 2rem;
 
-  width: 9rem;
-  height: 10rem;
+  width: 10rem;
+  height: auto;
   border-radius: 5px;
   background-color: rgba(247, 181, 94, 0.5);
-  padding: 1em;
+  padding: 1rem;
 }
 
 .nav__timeline {
@@ -33,8 +33,43 @@
 }
 
 .nav__weather {
-  height: auto;
+  height: 10rem;
 
   color: rgb(255, 255, 255);
   margin-bottom: 1rem;
+
+  display: grid;
+  gap: 0.6rem;
+  grid-template-rows: 3fr 2fr 3fr;
+}
+
+.nav__weather--country {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__weather--city {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.flagImg {
+  width: 3rem;
+}
+
+.nav__weather--temp {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav__weather--emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconImg {
+  height: 8rem;
 }
